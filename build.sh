@@ -1,5 +1,7 @@
 # Make HTML notes version of slides
-pandoc slides.md -o index.html -c css/notes.css \
+pandoc slides.md \
+    -o index.html \
+    -c revealjs/css/notes.css \
     --template=template.html -H header.html
 
 # Make revealjs version of slides

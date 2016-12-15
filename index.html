@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Easy Talk Slides and Notes</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="revealjs/css/notes.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+<h1 class="title">Easy Talk Slides and Notes</h1>
+<h2 class="author">by Eric J. Ma (Department of Biological Engineering, MIT)</h2>
+</div>
+<h1 id="slides-are-available-online">slides are available online!</h1>
+<ul>
+<li>source: <a href="https://github.com/ericmjl/easy-talk-slides-and-notes">github.com/ericmjl/easy-talk-slides-and-notes</a></li>
+<li>html notes: <a href="https://ericmjl.github.io/easy-talk-slides-and-notes">ericmjl.github.io/easy-talk-slides-and-notes</a></li>
+</ul>
+<h1 id="tools-required">tools required</h1>
+<ul>
+<li><a href="http://pandoc.org/">pandoc</a></li>
+<li><a href="https://www.python.org/">Python 3.5</a> - I recommend the <a href="https://www.continuum.io/downloads">Anaconda distribution</a> of Python.</li>
+<li><a href="https://cookiecutter.readthedocs.io/en/latest/">cookiecutter</a>
+<ul>
+<li>If you use the Anaconda Python distribution, it is installable using <code>conda install cookiecutter</code></li>
+</ul></li>
+</ul>
+<h1 id="get-started">get started</h1>
+<ol style="list-style-type: decimal">
+<li>Navigate on filesystem to parent directory of where you would like to put your slides.</li>
+<li>Run the following command and follow the instructions at the prompt:
+<ul>
+<li><code>cookiecutter gh:ericmjl/cookiecutter-talk</code></li>
+</ul></li>
+</ol>
+<h1 id="configure-remote">configure remote</h1>
+<ol style="list-style-type: decimal">
+<li>On GitHub, create a repository with the same name as the folder that houses the <code>slides.md</code> source.</li>
+<li>Run the <code>gh_init.sh</code> script: <code>$ bash gh_init.sh</code>. It will perform the initial push to the repository.</li>
+<li>Change your repository settings to serve GitHub pages from the master branch.</li>
+</ol>
+<h1 id="edit-publish">edit &amp; publish</h1>
+<ol style="list-style-type: decimal">
+<li>Edit the <code>slides.md</code> file to your liking.</li>
+<li>Run the bash script: <code>$ bash build.sh</code>. It will automatically upload your slides to GitHub.</li>
+</ol>
+<h1 id="checking">checking</h1>
+<ul>
+<li>Open the <code>slides.html</code> output in your browser. It should work!</li>
+<li>Now, open the magic URL: <code>[username].github.io/[repo-name]</code>.</li>
+</ul>
+</body>
+</html>

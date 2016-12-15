@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Easy Talk Slides and Notes</title>
+
+		<link rel="stylesheet" href="revealjs/css/reveal.css">
+        <!-- Allows user to select theme, or else default to beige. -->
+                <link rel="stylesheet" href="revealjs/css/theme/beige.css">
+        
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="revealjs/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'revealjs/css/print/pdf.css' : 'revealjs/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                <section id="title" class="slide level1">
+                    <h1>Easy Talk Slides and Notes</h1>
+                                                            <h2>Eric J. Ma (Department of Biological Engineering, MIT)</h2>
+                                                        </section>
+                <section id="slides-are-available-online" class="slide level1">
+                <h1>slides are available online!</h1>
+                <ul>
+                <li>source: <a href="https://github.com/ericmjl/easy-talk-slides-and-notes">github.com/ericmjl/easy-talk-slides-and-notes</a></li>
+                <li>html notes: <a href="https://ericmjl.github.io/easy-talk-slides-and-notes">ericmjl.github.io/easy-talk-slides-and-notes</a></li>
+                </ul>
+                </section>
+                <section id="tools-required" class="slide level1">
+                <h1>tools required</h1>
+                <ul>
+                <li><a href="http://pandoc.org/">pandoc</a></li>
+                <li><a href="https://www.python.org/">Python 3.5</a> - I recommend the <a href="https://www.continuum.io/downloads">Anaconda distribution</a> of Python.</li>
+                <li><a href="https://cookiecutter.readthedocs.io/en/latest/">cookiecutter</a>
+                <ul>
+                <li>If you use the Anaconda Python distribution, it is installable using <code>conda install cookiecutter</code></li>
+                </ul></li>
+                </ul>
+                </section>
+                <section id="get-started" class="slide level1">
+                <h1>get started</h1>
+                <ol type="1">
+                <li>Navigate on filesystem to parent directory of where you would like to put your slides.</li>
+                <li>Run the following command and follow the instructions at the prompt:
+                <ul>
+                <li><code>cookiecutter gh:ericmjl/cookiecutter-talk</code></li>
+                </ul></li>
+                </ol>
+                </section>
+                <section id="configure-remote" class="slide level1">
+                <h1>configure remote</h1>
+                <ol type="1">
+                <li>On GitHub, create a repository with the same name as the folder that houses the <code>slides.md</code> source.</li>
+                <li>Run the <code>gh_init.sh</code> script: <code>$ bash gh_init.sh</code>. It will perform the initial push to the repository.</li>
+                <li>Change your repository settings to serve GitHub pages from the master branch.</li>
+                </ol>
+                </section>
+                <section id="edit-publish" class="slide level1">
+                <h1>edit &amp; publish</h1>
+                <ol type="1">
+                <li>Edit the <code>slides.md</code> file to your liking.</li>
+                <li>Run the bash script: <code>$ bash build.sh</code>. It will automatically upload your slides to GitHub.</li>
+                </ol>
+                </section>
+                <section id="checking" class="slide level1">
+                <h1>checking</h1>
+                <ul>
+                <li>Open the <code>slides.html</code> output in your browser. It should work!</li>
+                <li>Now, open the magic URL: <code>[username].github.io/[repo-name]</code>.</li>
+                </ul>
+                </section>
+			</div>
+		</div>
+
+		<script src="revealjs/lib/js/head.min.js"></script>
+		<script src="revealjs/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+                transition: 'convex',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'revealjs/plugin/markdown/marked.js' },
+					{ src: 'revealjs/plugin/markdown/markdown.js' },
+					{ src: 'revealjs/plugin/notes/notes.js', async: true },
+					{ src: 'revealjs/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
