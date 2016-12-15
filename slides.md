@@ -21,7 +21,8 @@ theme: beige
 - [pandoc]
 - [Python 3.5][python] - I recommend the [Anaconda distribution][anaconda] of Python.
 - [cookiecutter]
-    - If you use the Anaconda Python distribution, it is installable using `conda install cookiecutter`
+    - If you use the Anaconda Python distribution, it is installable using `conda install cookiecutter`.
+    - Otherwise, `pip install cookiecutter`.
 
 [pandoc]: http://pandoc.org/
 [python]: https://www.python.org/
