@@ -9,12 +9,13 @@ theme: beige
 
 # slides are available online!
 
-- source: [github.com/ericmjl/easy-talk-slides-and-notes][source]
+- slides: [ericmjl.github.io/easy-talk-slides-and-notes/slides.html][slides]
 - html notes: [ericmjl.github.io/easy-talk-slides-and-notes][html]
+- source: [github.com/ericmjl/easy-talk-slides-and-notes][source]
 
 [source]: https://github.com/ericmjl/easy-talk-slides-and-notes
 [html]: https://ericmjl.github.io/easy-talk-slides-and-notes
-
+[slides]: https://ericmjl.github.io/easy-talk-slides-and-notes/slides.html
 # tools required
 
 - [pandoc]
